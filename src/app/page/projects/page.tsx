@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 export default function Portfolio() {
 
     const fetchProjects = async () => {
-        const res = await fetch("http://localhost:3000/api/projects");
+        const res = await fetch("/api/projects");
         const projects = await res.json();
         return projects;
     };
