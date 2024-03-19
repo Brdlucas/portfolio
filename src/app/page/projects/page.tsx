@@ -4,7 +4,7 @@ import Header from "@/app/components/header";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-export default function Portfolio() {
+export default function Projects() {
     const [search, setSearch] = useState('');
 
     const fetchProjects = async () => {
