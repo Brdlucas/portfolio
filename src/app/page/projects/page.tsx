@@ -1,11 +1,11 @@
 "use client"
 import Image from 'next/image';
-import Header from "@/app/components/header"
-import Profile from '/public/img/_DSC5091.jpg';
+import Header from "@/app/components/header";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Portfolio() {
+
 
     const fetchProjects = async () => {
         const res = await fetch("/api/projects");
@@ -50,7 +50,7 @@ export default function Portfolio() {
                                         <div className='md:pl-5 pt-2'>
                                             <p className=' font-semibold text-[20px] text-black'>{project.title}</p>
                                             <p className='mt-2 h-[full] min-h-[90px] text-black'>{project.description}</p>
-                                            <Link target='_blank' href={project.link} className='m-auto mb-3 mt-3 block w-[55%] text-center font-semibold text-[15px] text-white rounded-[20px] p-5 bg-purple-500 hover:bg-indigo-500 hover:scale-105'>Voir {project.title}</Link>
+                                            <Link target='_blank' href={project.link} className='m-auto mb-3 mt-3 block w-[55%] text-center font-semibold text-[15px] text-white rounded-[20px] p-5 bg-purple-500 hover:bg-indigo-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300'>Voir {project.title}</Link>
                                         </div>
                                     </div>
                                 )
