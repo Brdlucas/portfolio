@@ -3,9 +3,17 @@ import Image from 'next/image';
 import Header from "@/app/components/header";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Skeleton from './Skeleton';
 
 export default function Projects() {
     const [search, setSearch] = useState('');
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000)
+    }, []);
 
     const fetchProjects = async () => {
         const res = await fetch("/api/projects");
@@ -38,9 +46,9 @@ export default function Projects() {
                 </div>
                 <section className="m-auto w-[95%] pt-10">
                     <h1 className="pl-1 text-[30px] m-auto border-b-4 border-gray-300 text-purple-500 font-bold uppercase">Projet</h1>
-                    <div className='md:pl-[50px] mt-5 max-md:pt-10 grid grid-cols-3 gap-20 max-md:gap-10 max-md:grid-cols-1 max-md:text-center mb-5 max-lg:grid-cols-2'>
-                        {
-                            filterProjects.map((project: any) => (
+                    {loading ? <Skeleton /> :
+                        <div className='md:pl-[50px] mt-5 max-md:pt-10 grid grid-cols-3 gap-20 max-md:gap-10 max-md:grid-cols-1 max-md:text-center mb-5 max-lg:grid-cols-2'>
+                            {filterProjects.map((project: any) => (
                                 <div key={project._id} className="block m-auto drop-shadow-2xl bg-gray-100 shd w-[80%] h-full rounded-[25px] hover:rounded-[15px] hover:scale-110 duration-400 transition ease-in-out delay-150">
                                     <div className='relative h-[100px] border-b-4 border-gray-800'>
                                         <Image
@@ -61,8 +69,9 @@ export default function Projects() {
                                     </div>
                                 </div>
                             ))
-                        }
-                    </div>
+                            }
+                        </div>
+                    }
                 </section>
             </div>
         </div>
