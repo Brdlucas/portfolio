@@ -5,6 +5,8 @@ export interface IContact extends Document {
     lastname: string;
     company: string;
     email: string;
+    job: string;
+    description: string;
 }
 
 const contactSchema: Schema = new mongoose.Schema({
@@ -26,6 +28,15 @@ const contactSchema: Schema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
+    },
+
+    job: {
+        type: String,
+        required: true,
+    },
+
+    description: {
+        type: String,
     }
 });
 

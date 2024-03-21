@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import Image from "next/image"
-import Moon from '../../../public/Moon.svg'
-import Sun from '../../../public/sun.svg'
+import Moon from '../../../public/svg/Moon.svg'
+import Sun from '../../../public/svg/sun.svg'
 
 export default function ThemeSwitch() {
     const [chargement, setChargement] = useState(false)

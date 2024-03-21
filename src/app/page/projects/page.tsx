@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Header from "@/app/components/header";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Skeleton from './Skeleton';
+import Skeleton from './skeleton';
 
 export default function Projects() {
     const [search, setSearch] = useState('');
@@ -12,7 +12,7 @@ export default function Projects() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 1000)
+        }, 2000)
     }, []);
 
     const fetchProjects = async () => {
@@ -29,10 +29,6 @@ export default function Projects() {
         });
     }, []);
 
-    const handleChange = (e: any) => {
-        setSearch(e.target.value);
-    };
-
     const filterProjects = projects.filter((project: any) => {
         return (project.title.toLowerCase().includes(search.toLowerCase()) || project.description.toLowerCase().includes(search.toLowerCase()));
     });
@@ -42,7 +38,7 @@ export default function Projects() {
             <Header />
             <div>
                 <div>
-                    <textarea name="search-textarea" placeholder='Rechercher' value={search} onChange={handleChange} className="pt-5 mt-5 flex  m-auto bg-gray-100 text-center font-semibold resize-none w-[70%]" />
+                    <textarea name="search-textarea" placeholder='Rechercher' value={search} onChange={(e) => setSearch(e.target.value)} className="text-black pt-5 mt-5 flex  m-auto bg-gray-100 text-center font-semibold resize-none w-[70%]" />
                 </div>
                 <section className="m-auto w-[95%] pt-10">
                     <h1 className="pl-1 text-[30px] m-auto border-b-4 border-gray-300 text-purple-500 font-bold uppercase">Projet</h1>
