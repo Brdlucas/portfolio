@@ -22,6 +22,7 @@ export default function Home() {
           alt="Photo de Profile"
           property='Lucas Bourdon'
           sizes='36x36'
+          priority
           />
         </div>
         <strong className='block text-center mt-[15px] w-[75%] m-auto max-2xl:text-[25px] md:text-[30px]'>Lucas Bourdon</strong>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Header from "@/app/components/header";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Skeleton from './Skeleton.jsx';
+import Skeleton from './Skeleton';
 
 export default function Projects() {
     const [search, setSearch] = useState('');
