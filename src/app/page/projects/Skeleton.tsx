@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function Skeleton() {
+function Skeleton() {
     return (
         <div className='md:pl-[50px] mt-5 max-md:pt-10 grid grid-cols-3 gap-20 max-md:gap-10 max-md:grid-cols-1 max-md:text-center mb-5 max-lg:grid-cols-2'>
             {
@@ -21,3 +21,5 @@ export default function Skeleton() {
         </div >
     )
 }
+
+export default Skeleton;
