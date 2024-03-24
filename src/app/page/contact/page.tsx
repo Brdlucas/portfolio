@@ -32,7 +32,8 @@ export default function Contact() {
                 lastname,
                 email,
                 company,
-                description
+                description,
+                job
             };
 
             try {
@@ -50,12 +51,12 @@ export default function Contact() {
                 console.log('Succès:', contactData);
                 setSucces(true);
 
-                setFirstname('');
-                setLastname('');
+                setJob('');
                 setEmail('');
                 setCompany('');
+                setLastname('');
+                setFirstname('');
                 setDescription('');
-                setJob('');
 
             } catch (error) {
                 console.error('Erreur:', error);
