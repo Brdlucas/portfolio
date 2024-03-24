@@ -46,9 +46,6 @@ export default function Contact() {
                 });
 
                 if (!response.ok) throw new Error('Api non connecté');
-
-                const contactData = await response.json();
-                console.log('Succès:', contactData);
                 setSucces(true);
 
                 setJob('');
