@@ -9,7 +9,7 @@ export default function About() {
         <div className="w-[70%] m-auto h-full ">
             <Header />
             <section className="text-justify pt-5">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vero autem, magni ab perspiciatis tempore corporis expedita nisi neque totam. Similique facilis, quam harum optio labore quisquam dolorem provident voluptatem.
+                <p>Lorem ipsum dolor sit amet, conssectetur adipisicing elit. Sapiente vero autem, magni ab perspiciatis tempore corporis expedita nisi neque totam. Similique facilis, quam harum optio labore quisquam dolorem provident voluptatem.
                     Odit vitae, praesentium molestias minima ratione quam quaerat voluptatum incidunt amet ipsum suscipit ab veritatis, et debitis? Nesciunt hic quae natus, ipsum architecto praesentium at blanditiis voluptas sint similique cumque.
                     Architecto harum doloremque cum natus accusantium facilis pariatur odit quod. In repudiandae ipsa iusto magnam aut? Possimus quod beatae alias consequuntur dolorum debitis repellendus odio voluptatem quasi dolores, recusandae illum?
                     Consectetur earum recusandae perspiciatis, illum sapiente sequi distinctio provident deleniti voluptatum exercitationem laborum iure hic reiciendis magnam tempora ipsam. Architecto dolorum aut quae veritatis reprehenderit qui perspiciatis ullam earum recusandae.

@@ -7,7 +7,7 @@ const Language = [
         "width" : 480,
         "height": 480,
         "src": "https://img.icons8.com/color/480/html-5--v1.png",
-        "alt": "html5",
+        "alt": "html5s",
         "type": "frontend",
     },
 
