@@ -21,7 +21,7 @@ export default function About() {
             <section>
                 <h1 className="border-b-2 border-purple-600 pt-5 text-[30px] font-semibold uppercase">Langage : </h1>
                 <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">FrontEnd</h2>
-                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-2 border ">
+                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-2 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
                             if (language.type == "frontend") {
@@ -40,7 +40,7 @@ export default function About() {
                     }
                 </div>
                 <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">css</h2>
-                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 border">
+                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
                             if (language.type == "css") {
@@ -60,7 +60,7 @@ export default function About() {
 
                 </div>
                 <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">Backend</h2>
-                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 mb-3 border">
+                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 mb-3 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
                             if (language.type == "backend") {
@@ -79,7 +79,7 @@ export default function About() {
                     }
                 </div>
                 <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">Database</h2>
-                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 mb-3 border">
+                <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 mb-3 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
                             if (language.type == "database") {
