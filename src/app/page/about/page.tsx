@@ -20,7 +20,7 @@ export default function About() {
             </section>
             <section>
                 <h1 className="border-b-2 border-purple-600 pt-5 text-[30px] font-semibold uppercase">Langage : </h1>
-                <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">FrontEnd</h2>
+                <h2 className="text-[30px] text-center bg-gray-50 w-64 m-auto font-semibold mt-5 uppercase">FrontEnd</h2>
                 <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-2 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
@@ -29,7 +29,7 @@ export default function About() {
                                     <div key={language.id} className="">
                                         <div className="group bg-gray-100 hover:bg-gray-300 hover:cursor-pointer w-[130px] p-2 m-auto rounded-[5px] hover:scale-105 relative">
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <Link href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
+                                                <Link target="_blank" href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
                                             </div>
                                             <Image className="m-auto" src={language.src} alt={language.alt} width={language.width} height={language.height} />
                                         </div>
@@ -39,7 +39,7 @@ export default function About() {
                         })
                     }
                 </div>
-                <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">css</h2>
+                <h2 className="text-[30px] text-center bg-gray-50 w-64 m-auto font-semibold mt-5 uppercase">css</h2>
                 <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
@@ -48,7 +48,7 @@ export default function About() {
                                     <div key={language.id} className="">
                                         <div className="group bg-gray-100 hover:bg-gray-300 hover:cursor-pointer w-[130px] p-2 m-auto rounded-[5px] hover:scale-105 relative">
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <Link href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
+                                                <Link target="_blank" href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
                                             </div>
                                             <Image className="m-auto" src={language.src} alt={language.alt} width={language.width} height={language.height} />
                                         </div>
@@ -59,16 +59,16 @@ export default function About() {
                     }
 
                 </div>
-                <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">Backend</h2>
+                <h2 className="text-[30px] text-center bg-gray-50 w-64 m-auto font-semibold mt-5 uppercase">Backend</h2>
                 <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 mb-3 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
                             if (language.type == "backend") {
                                 return (
-                                    <div key={language.id} className="">
+                                    <div key={language.id}>
                                         <div className="group bg-gray-100 hover:bg-gray-300 hover:cursor-pointer w-[130px] p-2 m-auto rounded-[5px] hover:scale-105 relative">
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <Link href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
+                                                <Link target="_blank" href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
                                             </div>
                                             <Image className="m-auto" src={language.src} alt={language.alt} width={language.width} height={language.height} />
                                         </div>
@@ -78,16 +78,16 @@ export default function About() {
                         })
                     }
                 </div>
-                <h2 className="text-[30px] text-center bg-gray-50 w-[20%] m-auto font-semibold mt-5 uppercase">Database</h2>
+                <h2 className="text-[30px] text-center bg-gray-50 w-64 m-auto font-semibold mt-5 uppercase">Database</h2>
                 <div className="grid gap-5 grid-flow-cols grid-cols-5 p-3 m-auto bg-gray-50 mt-5 mb-3 border max-lg:grid-cols-3 max-sm:grid-cols-1">
                     {
                         Language.map((language) => {
                             if (language.type == "database") {
                                 return (
-                                    <div key={language.id} className="">
+                                    <div key={language.id}>
                                         <div className="group bg-gray-100 hover:bg-gray-300 hover:cursor-pointer w-[130px] p-2 m-auto rounded-[5px] hover:scale-105 relative">
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <Link href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
+                                                <Link target="_blank" href={language.link || "/"} className="opacity-0 duration-300 group-hover:opacity-75 text-center bg-gray-700 text-white p-1 rounded">{language.alt}</Link>
                                             </div>
                                             <Image className="m-auto" src={language.src} alt={language.alt} width={language.width} height={language.height} />
                                         </div>
@@ -98,6 +98,6 @@ export default function About() {
                     }
                 </div>
             </section >
-        </div >
+        </div>
     )
 }

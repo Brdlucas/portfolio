@@ -61,6 +61,7 @@ export default function Contact() {
             }
         } else {
             setEmailError(true)
+
         }
 
     };
@@ -68,16 +69,16 @@ export default function Contact() {
     return (
         <div className='h-full m-auto'>
             <Header />
-            <div className=' pt-3 w-[50%] m-auto'>
-                <h1 className=' text-[30px] border-b-2 border-purple-600'>Mes informations</h1>
-                <div className='m-auto w-[50%] text-center mt-3 text-[20px] font-semibold'>
+            <div className=' pt-3 w-[50%] m-auto max-lg:w-[90%]'>
+                <h1 className=' text-[30px] border-b-2 border-purple-600 font-semibold'>Mes informations</h1>
+                <div className='m-auto max-md:w-[100%] w-[50%] text-center mt-3 text-[20px] font-semibold '>
                     <p>email : lb.lucasbourdon@gmail.com</p>
                     <p>téléphone : 07.68.21.11.49</p>
                 </div>
-                <p className='border-b-2 border-purple-600 text-[30px] m-auto mt-5'>S&apos;enregistrer</p>
+                <p className='border-b-2 border-purple-600 text-[30px] m-auto mt-5 font-semibold'>S&apos;enregistrer</p>
             </div>
-            <form onSubmit={handleSubmit} className='mt-5 m-auto w-[50%] max-md:w-[90%]'>
-                <div className='grid grid-cols-1 gap-10 m-auto text-center drop-shadow-2xl rounded-[15px] pt-16 pb-6 border-[3px] border-gray-300'>
+            <form onSubmit={handleSubmit} className='mt-5 m-auto w-[50%]  max-lg:w-[90%]'>
+                <div className='grid grid-cols-1 gap-10 m-auto text-center drop-shadow-2xl rounded-[15px] pt-16 pb-6 border-[3px] border-gray-300 '>
                     <input className='w-[70%] text-black hover:border-[3px] hover:border-purple-500 bg-white outline-purple-500  m-auto h-[50px] focus:rounded-[15px] pl-3 hover:cursor-pointer hover:rounded-[15px] hover:scale-110 duration-400' type="text" placeholder="Prénom" value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
                     <input className='w-[70%] text-black hover:border-[3px] hover:border-purple-500 bg-white outline-purple-500  m-auto h-[50px] focus:rounded-[15px] pl-3 hover:cursor-pointer hover:rounded-[15px] hover:scale-110 duration-400' type="text" placeholder="Nom" value={lastname} onChange={(e) => setLastname(e.target.value)} required />
                     {emailError && <p className='bg-red-700 text-white border-red-900 w-[350px] m-auto rounded-[15px]'>des caractères ou l&apos;email n&apos;est pas valide.</p>}
@@ -90,8 +91,8 @@ export default function Contact() {
             </form>
             {succes && <p className="bg-gray-100 rounded-[30px] w-96 m-auto text-green-600 text-center mt-4">Votre message a été envoyé avec succès !</p>}
             <div className='mt-3 mb-5'>
-                <h2 className='w-[50%] m-auto text-[30px] border-b-2 border-purple-600 mt-10 upp'>Autre</h2>
-                <div className='w-[30%] mt-3 m-auto flex justify-between'>
+                <h2 className='w-[50%] max-lg:w-[90%] m-auto text-[30px] border-b-2 border-purple-600 mt-10 upp'>Autre</h2>
+                <div className='w-[30%] max-lg:w-[50%] max-md:w-[90%] mt-3 m-auto flex justify-between'>
                     <Link target="_blank" href={'https://www.linkedin.com/in/lucas-bourdon-97ba91240/'} className='w-[50xp]'>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 48 48">
                             <path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
