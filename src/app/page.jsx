@@ -28,7 +28,7 @@ export default function Home() {
         <strong className='block text-center mt-[15px] w-[75%] m-auto max-2xl:text-[25px] md:text-[30px]'>Lucas Bourdon</strong>
           </div>
         <div className=' h-[40%] 2xl:absolute md:left-[240px] max-2xl:mt-5 2xl:mt-48 2xl:w-[35%]'>
-        <h2 className='max-2xl:mt-16 max-2xl:m-auto md:text-2xl text-justify tracking-tighter max-2xl:w-[75%] max-3xl:w-[90%]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus ipsum voluptates, totam sequi maxime a ut. Voluptatibus voluptatem ea, ad eligendi, ab quod eum possimus magnam repellat fugiat fuga?</h2>
+        <h2 className='max-2xl:mt-16 max-2xl:m-auto md:text-2xl text-justify tracking-tighter max-2xl:w-[75%] max-3xl:w-[90%]'>Diplomé d&apos;un bac + 2, Je suis a la recherche d&apos;une entreprise pour la rentrée septembre 2024. Entre temps j&apos;apprend de manière autodidacte plusieurs langages (nextjs, python etc...). </h2>
         <Link href="/page/projects" className='select-none 2xl:absolute max-2xl:block m-auto max-2xl:w-[30%] max-md:w-[70%] max-md:mt-5 max-2xl:mt-10 2xl:mt-16 2xl:w-[35%] text-center text-2xl text-white p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:-translate-y-1 hover:scale-110 transition ease-in-out delay-150'>Mes créations</Link>
         </div>
       </section>
