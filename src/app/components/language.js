@@ -4,8 +4,8 @@ import php from "@/../public/img/langage/php.png";
 const Language = [
     {
         "id": 1,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/color/480/html-5--v1.png",
         "alt": "html5s",
         "type": "frontend",
@@ -13,8 +13,8 @@ const Language = [
 
     {
         "id": 2,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/color/480/css3.png",
         "alt": "css3",
         "type": "css",
@@ -33,8 +33,8 @@ const Language = [
 
     {
         "id": 4,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/color/480/tailwindcss.png",
         "alt": "TailwindCss",
         "type": "css",
@@ -44,8 +44,8 @@ const Language = [
 
     {
         "id": 5,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": Symfony,
         "alt": "Symfony",
         "type": "backend",
@@ -54,8 +54,8 @@ const Language = [
 
     {
         "id": 6,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": php,
         "alt": "php",
         "type": "backend",
@@ -65,8 +65,8 @@ const Language = [
 
     {
         "id": 7,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/color/480/python--v1.png",
         "alt": "python",
         "type": "backend",
@@ -75,8 +75,8 @@ const Language = [
 
     {
         "id": 8,
-        "width" : 240,
-        "height": 240,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/fluency/240/nextjs.png",
         "alt": "nextjs",
         "type": "frontend",
@@ -85,8 +85,8 @@ const Language = [
 
     {
         "id": 9,
-        "width" : 240,
-        "height": 240,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/fluency/240/bootstrap.png",
         "alt": "bootstrap",
         "type": "css",
@@ -95,21 +95,21 @@ const Language = [
 
     {
         "id": 10,
-        "width" : 240,
-        "height": 240,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/fluency/240/mysql-logo.png",
         "alt": "mysql",
-        "type": "backend",
+        "type": "database",
         "link": "https://www.mysql.com/fr/"
     },
 
     {
         "id": 11,
-        "width" : 480,
-        "height": 480,
+        "width" : 96,
+        "height": 96,
         "src": "https://img.icons8.com/color/480/javascript--v1.png",
         "alt": "javascript",
-        "type": "backend",
+        "type": "frontend",
     },
 
     {
@@ -132,6 +132,15 @@ const Language = [
         "link": "https://www.mongodb.com/fr-fr"
     },
 
+    {
+        "id": 14,
+        "width" : 96,
+        "height": 96,
+        "src": "https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000",
+        "alt": "typescript",
+        "type": "frontend",
+        "link": "https://www.typescriptlang.org/"
+    },
 ];
 
 
