@@ -27,7 +27,7 @@ export default function Projects() {
     }, []);
 
     const filterProjects = projects.filter((project: any) => {
-        return (project.title.toLowerCase().includes(search.toLowerCase()) || project.description.toLowerCase().includes(search.toLowerCase()));
+        return (project.title.toLowerCase().includes(search.toLowerCase()) || project.description.toLowerCase().includes(search.toLowerCase()) || project.date.includes(search));
     });
 
 
@@ -59,6 +59,7 @@ export default function Projects() {
                                     <div className='md:pl-5 pt-2'>
                                         <p className={`font-semibold text-[20px] ${isTheme.theme === 'dark' ? 'text-white' : 'text-black'}`}>{project.title}</p>
                                         <p className={`pt-2 h-[full] min-h-[90px]  ${isTheme.theme === 'dark' ? 'text-white' : 'text-black'}`}>{project.description}</p>
+                                        <strong className={`pt-2  ${isTheme.theme === 'dark' ? 'text-white' : 'text-black'}`}>année : {project.date}</strong>
                                         <Link target='_blank' href={project.link} className='m-auto mb-3 mt-3 block w-[70%] text-center font-semibold text-[15px] text-white rounded-[20px] p-5 bg-purple-500 hover:bg-indigo-500 '>Voir {project.title}</Link>
                                     </div>
                                 </div>

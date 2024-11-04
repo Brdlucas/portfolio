@@ -6,6 +6,7 @@ export interface IProject extends Document {
     description: string;
     link: string;
     language: string;
+    date: Date;
 }
 
 const projectSchema: Schema = new mongoose.Schema({
@@ -31,6 +32,11 @@ const projectSchema: Schema = new mongoose.Schema({
 
     language: {
         type: String,
+        required: true,
+    },
+
+    date: {
+        type: Date,
         required: true,
     }
 });
