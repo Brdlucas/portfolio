@@ -15,9 +15,9 @@ export default function ThemeSwitch() {
     if (!chargement) return (
         <Image
             src={Moon}
-            width={36}
-            height={36}
-            sizes="36x36"
+            width={28}
+            height={28}
+            sizes="28x28"
             alt="Loading Light/Dark Toggle"
             priority={false}
             title="Loading Light/Dark Toggle"
@@ -26,11 +26,11 @@ export default function ThemeSwitch() {
     )
 
     if (resolvedTheme === 'dark') {
-        return <Image src={Sun} width={36} height={36} sizes='36x36' alt='LightMode' onClick={() => setTheme('light')} className='hover:cursor-pointer max-md:absolute max-md:left-[10px] max-md:top-[10px]' />
+        return <Image src={Sun} width={28} height={28} sizes='28x28' alt='LightMode' onClick={() => setTheme('light')} className='hover:cursor-pointer max-md:absolute max-md:left-[10px] max-md:top-[10px]' />
     }
 
     if (resolvedTheme === 'light') {
-        return <Image onClick={() => setTheme('dark')} src={Moon} width={36} height={36} sizes='36x36' alt='DarkMode' className='hover:cursor-pointer max-md:absolute max-md:left-[10px] max-md:top-[10px]' />
+        return <Image onClick={() => setTheme('dark')} src={Moon} width={28} height={28} sizes='28x28' alt='DarkMode' className='hover:cursor-pointer max-md:absolute max-md:left-[10px] max-md:top-[10px] h-full' />
     }
 
 }

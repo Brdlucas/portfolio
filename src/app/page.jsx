@@ -4,17 +4,18 @@ import Image from "next/image";
 import Header from "./components/header.tsx";
 import Profile from "../../public/img/_DSC5091.jpg";
 import Link from "next/link";
+import { motion } from "motion/react";
+import { scale } from "motion";
 
 export default function Home() {
   return (
-    <main className="max-2xl:h-[1000px]">
-      <Header />
-      <section className="max-2xl:h-[65%] max-2xl:pt-5 pt-5">
-        <h1 className=" max-2xl:leading-[40px] pt-[5px] tracking-tighter text-[35px] max-2xl:m-auto mt-16 text-center max-2xl:w-[75%] md:left-[240px] md:w-[30%] 2xl:absolute font-bold">
-          Développeur web et <a className="text-purple-500">web mobile</a>
-        </h1>
-        <div className="2xl:absolute max-2xl:mt-5 max-2xl:w-[260px] max-2xl:h-[260px] max-2xl:m-auto md:right-72 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full md:w-[510px] md:h-[510px] pt-1">
-          <div className="select-none	 rounded-full md:h-[500px] md:w-[500px] max-2xl:h-[250px] m-auto max-2xl:w-[250px] relative">
+    <section className="lg:py-5 px-2 gap-x-2  flex flex-row-reverse max-lg:gap-6 justify-center max-lg:flex-col">
+      <h1 className="min-lg:hidden text-3xl text-center font-bold mb-3">
+        Développeur web et <a className="text-[#00ABE4]">web mobile</a>
+      </h1>
+      <div className="lg:w-[40%] flex flex-col align-bottom lg:place-items-start">
+        <div className="block">
+          <div className="select-none	 rounded-full md:h-[500px] md:w-[500px] max-2xl:h-[250px] m-auto max-lg:m-auto max-2xl:w-[250px] relative border-4 border-[#00ABE4] ">
             <Image
               src={Profile}
               fill
@@ -26,28 +27,33 @@ export default function Home() {
               priority
             />
           </div>
-          <strong className="block text-center mt-[15px] w-[75%] m-auto max-2xl:text-[25px] md:text-[30px]">
+          <p className="text-center text-4xl font-semibold mt-3 w-full">
             Lucas Bourdon
-          </strong>
+          </p>
         </div>
-        <div className=" h-[40%] 2xl:absolute md:left-[240px] max-2xl:mt-5 2xl:mt-48 2xl:w-[35%]">
-          <h2 className="max-2xl:mt-16 max-2xl:m-auto md:text-2xl text-justify tracking-tighter max-2xl:w-[75%] max-3xl:w-[90%]">
+      </div>
+      <div className=" place-items-center lg:w-[60%] max-sm:text-center md:w-[75%] lg:h-100 self-center lg:justify-between flex flex-col max-lg:place-items-center justify-center align-middle max-sm:text-balance lg:text-start">
+        <div className="w-10/12 self-end max-lg:w-full max-lg:gap-3 h-full flex flex-col justify-center lg:justify-between ">
+          <h1 className="max-lg:hidden text-3xl font-bold max-lg:mb-3">
+            Développeur web et <a className="text-[#00ABE4]">web mobile</a>
+          </h1>
+          <h2 className="lg:text-2xl lg:w-10/12 w-full ">
             Diplomé d&apos;un bac + 2, Je suis a la recherche d&apos;un stage
             d&apos;une durée de moins de 3 mois (du 24 mars au 20 juin 2025) .
             Je suis actuellement en formation en tant que{" "}
-            <strong className="text-purple-600">
+            <strong className="text-[#00ABE4]">
               concepteur développeur d&apos;application (CDA)
             </strong>
             .{" "}
           </h2>
           <Link
             href="/page/projects"
-            className="select-none 2xl:absolute max-2xl:block m-auto max-2xl:w-[30%] max-md:w-[70%] max-md:mt-5 max-2xl:mt-10 2xl:mt-16 2xl:w-[35%] text-center text-2xl text-white p-5 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:-translate-y-1 hover:scale-110 transition ease-in-out delay-150"
+            className="text-center max-lg:m-auto text-white text-2xl w-54 min-md:max-w-72 py-3 bg-gradient-to-r from-violet-500 to-[#00ABE4] lg:p-5 hover:scale-105 hover:rounded-2xl duration-500 transform-all"
           >
             Mes créations
           </Link>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

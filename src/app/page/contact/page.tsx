@@ -80,7 +80,6 @@ export default function Contact() {
 
     return (
         <div className='h-full m-auto'>
-            <Header />
             <div className=' pt-3 w-[50%] m-auto max-lg:w-[90%]'>
                 <h1 className=' text-[30px] border-b-2 border-purple-600 font-semibold'>Mes informations</h1>
                 <div className='m-auto max-md:w-[100%] w-[50%] text-center mt-3 text-[20px] font-semibold '>
