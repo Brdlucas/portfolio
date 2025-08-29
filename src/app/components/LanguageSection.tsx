@@ -28,9 +28,9 @@ export default function LanguageSection() {
                 if (filteredLanguages.length === 0) return null;
 
                 return (
-                    <div key={key} className="mb-10">
+                    <div key={key} className="mb-10 flex flex-col gap-5">
                         <h2
-                            className={`text-[30px] text-center w-64 m-auto font-semibold mt-5 uppercase drop-shadow-2xl ${themeClass(
+                            className={`text-[30px] text-center w-64 m-auto font-semibold mt-5 uppercase shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] ${themeClass(
                                 "bg-gray-700",
                                 "bg-gray-50"
                             )}`}
@@ -38,7 +38,7 @@ export default function LanguageSection() {
                             {label}
                         </h2>
                         <div
-                            className={`grid gap-5 max-sm:grid-cols-3 grid-flow-cols grid-cols-5 p-3 m-auto mt-2 rounded-2xl drop-shadow-2xl max-lg:grid-cols-3 ${themeClass(
+                            className={`grid gap-5 max-sm:grid-cols-3 grid-flow-cols grid-cols-5 p-3 m-auto mt-2 rounded-2xl shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] max-lg:grid-cols-3 ${themeClass(
                                 "bg-gray-700 border-gray-700",
                                 "bg-gray-50"
                             )}`}
