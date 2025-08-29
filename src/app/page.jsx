@@ -35,15 +35,22 @@ export default function Home() {
       <div className=" place-items-center lg:w-[60%] max-sm:text-center md:w-[75%] lg:h-100 self-center lg:justify-between flex flex-col max-lg:place-items-center justify-center align-middle max-sm:text-balance lg:text-start">
         <div className="w-10/12 self-end max-lg:w-full max-lg:gap-3 h-full flex flex-col justify-center lg:justify-between ">
           <h1 className="max-lg:hidden text-3xl font-bold max-lg:mb-3">
-            Développeur web et <a className="text-[#00ABE4]">web mobile</a>
+            développeur <a className="text-[#00ABE4]">full stack (M1/M2)</a>
           </h1>
           <h2 className="lg:text-2xl lg:w-10/12 w-full ">
-            Diplomé d&apos;un bac + 3, Je suis actuellement en formation en tant que{" "}
+            Diplomé d&apos;un bac + 3, Je suis actuellement en formation en tant
+            que{" "}
             <strong className="text-[#00ABE4]">
-              développeur full stack (M1/M2) 
-            </strong>
-            {" "}
-            en alternance.{" "}
+              développeur full stack (M1/M2)
+            </strong>{" "}
+            dans l'école{"  "}
+            <strong className="text-[#00ABE4]">
+              Sup de Vinci
+            </strong>{" "}
+            en alternance dans l'entreprise{"  "}
+            <strong className="text-[#00ABE4]">
+              investir dans l'ancien
+            </strong>.
           </h2>
           <Link
             href="/page/projects"
