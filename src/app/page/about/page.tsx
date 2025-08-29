@@ -19,8 +19,8 @@ export default function About() {
 
   return (
     <div className="px-2 m-auto max-w-9/12 max-md:max-w-full">
-      <section className="text-justify relative">
-        <div className="absolute w-full h-full -z-5 bg-white shadow-2xl rounded-2xl"></div>
+      <section className="text-justify relative mb-5">
+        <div className="absolute w-full h-full -z-5 bg-white shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] rounded-2xl"></div>
         <div className="p-3">
           <p className='text-black'>
             Après des études en systèmes numériques, j&apos;ai suivi une formation
@@ -33,7 +33,7 @@ export default function About() {
             plusieurs langages les plus connus tels que HTML (langage de
             balisage), CSS, et JavaScript, ainsi que des langages / frameworks plus
             &ldquo;modernes&ldquo; comme Symfony et React{" "}
-            <a className="text-[#00ABE4]" href="#language_id">
+            <a className="text-[#00abe4]" href="#language_id">
               {" "}
               (détails ci-dessous)
             </a>
