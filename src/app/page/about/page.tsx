@@ -22,7 +22,7 @@ export default function About() {
       <section className="text-justify relative">
         <div className="absolute w-full h-full -z-5 bg-white shadow-2xl rounded-2xl"></div>
         <div className="p-3">
-          <p>
+          <p className='text-black'>
             Après des études en systèmes numériques, j&apos;ai suivi une formation
             pour obtenir un{" "}
             <strong className="text-[#00ABE4]">
