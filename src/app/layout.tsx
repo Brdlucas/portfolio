@@ -29,7 +29,7 @@ export default function RootLayout(
 
       <body className={inter.className}>
         <Providers>
-          <ThemeSplineClient />
+          {/* <ThemeSplineClient /> */}
           <Header />
           <main>{children}</main>
         </Providers>
