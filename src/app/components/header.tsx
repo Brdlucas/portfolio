@@ -44,10 +44,10 @@ const Header = () => {
   return (
     <header className=' max-2xl:h-16 2xl:h-[100px] ' >
       <nav className='max-lg:hidden max-2xl:text-center max-2xl:p-[10px] font-bold 2xl:absolute max-lg:w-[70%] m-auto max-2xl:w-[50%]  flex md:flex-row 2xl:w-[30%] md:right-[250px] lg:mt-8 items-center md:place-content-around'>
-        {pathname === '/' ? null : <Link href={'/'} className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>Home</Link>}
-        <Link href='/page/contact' className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>Contact</Link>
-        <Link href='/page/about' className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>About</Link>
-        <Link href='/page/projects' className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>Projects</Link>
+        {pathname === '/' ? null : <Link href={'/'} className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>Acceuil</Link>}
+        <Link href='/page/contact' className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>me contacter</Link>
+        <Link href='/page/about' className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>a propos</Link>
+        <Link href='/page/projects' className='block max-2xl:mb-[10px] max-2xl:w-[50%] max-2xl:m-auto hover:text-[#00ABE4]'>mes projets</Link>
         <ThemeSwitches />
       </nav>
 
