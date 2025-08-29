@@ -5,19 +5,20 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Skeleton from "./Skeleton";
 import { useTheme } from "next-themes";
-import projects from "../../components/projects"
-import { div } from "motion/react-client";
+import projects from "../../components/projects";
 
 export default function Projects() {
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
   const isTheme = useTheme();
 
+  // Filtre les projets selon la recherche (insensible à la casse)
   const filterProjects = projects.filter((project: any) => {
-    return (
-      project.title.toLowerCase().includes(search.toLowerCase()) ||
-      project.description.toLowerCase().includes(search.toLowerCase()) ||
-      project.date.includes(search)
+    const searchTerm = search.trim().toLowerCase();
+    if (!searchTerm) return true; // si recherche vide, tout afficher
+
+    // Cherche dans chaque propriété string du projet si la recherche est contenue
+    return Object.values(project).some((value) =>
+      typeof value === "string" && value.toLowerCase().includes(searchTerm)
     );
   });
 
@@ -30,35 +31,47 @@ export default function Projects() {
             placeholder="Rechercher"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className={`text-black pt-5 mt-5 flex  m-auto text-center font-semibold resize-none w-[70%] ${isTheme.theme === "dark"
-              ? "bg-gray-700 text-white"
-              : "bg-gray-100 "
+            className={`rounded-2xl hover:scale-105 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] text-[#00ABE4] transition duration-300 cursor-pointer pt-5 mt-5 flex m-auto text-center font-semibold resize-none w-[70%] ${isTheme.theme === "dark" ? "bg-gray-700 text-white" : ""
               }`}
           />
         </div>
         <section className="m-auto w-[95%] pt-10">
-          <h1 className="pl-1 text-[30px] m-auto border-b-4 border-gray-300 text-purple-500 font-bold uppercase">
-            {projects.length} projets
+          <h1 className="pl-1 text-[30px] m-auto border-b-4 border-gray-300 text-[#00ABE4] font-bold uppercase">
+            {filterProjects.length} projet{filterProjects.length > 1 ? "s" : ""}
           </h1>
 
-          {!projects ? (
+          {projects.length === 0 ? (
             <Skeleton />
+          ) : filterProjects.length === 0 ? (
+            <p className="text-center text-gray-500 mt-10">
+              Aucun projet ne correspond à la recherche.
+            </p>
           ) : (
-            <div className="w-full h-full bg-blue-300 p-2">
+            <div className="w-full h-full p-6 flex flex-wrap gap-6 justify-center">
               {filterProjects.map((project: any) => (
-                <div key={project.id} className="w-85 h-100 bg-red-300">
-                  <div className="w-full h-full bg-red-800">
+                <Link
+                  href={project.link}
+                  key={project.id}
+                  className="w-[320px] bg-white rounded-xl shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] overflow-hidden transition-transform hover:scale-105"
+                >
+                  <div className="h-[180px] w-full bg-gray-200 flex items-center justify-center">
                     <Image
                       src={project.image}
-                      style={{ objectFit: "cover" }}
-                      className=""
-                      alt="Project image"
+                      alt={`Project ${project.title}`}
+                      className="object-cover w-full h-full"
                       property="Lucas Bourdon"
                       priority
                     />
-
                   </div>
-                </div>
+                  <div className="p-2">
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm">{project.description}</p>
+                    <p className="text-ms text-gray-500 mt-2">{project.language}</p>
+                    <p className="text-xs text-gray-500 mt-2">{project.date}</p>
+                  </div>
+                </Link>
               ))}
             </div>
           )}
