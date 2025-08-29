@@ -38,13 +38,12 @@ export default function Home() {
             Développeur web et <a className="text-[#00ABE4]">web mobile</a>
           </h1>
           <h2 className="lg:text-2xl lg:w-10/12 w-full ">
-            Diplomé d&apos;un bac + 2, Je suis a la recherche d&apos;un stage
-            d&apos;une durée de moins de 3 mois (du 24 mars au 20 juin 2025) .
-            Je suis actuellement en formation en tant que{" "}
+            Diplomé d&apos;un bac + 3, Je suis actuellement en formation en tant que{" "}
             <strong className="text-[#00ABE4]">
-              concepteur développeur d&apos;application (CDA)
+              développeur full stack (M1/M2) 
             </strong>
-            .{" "}
+            {" "}
+            en alternance.{" "}
           </h2>
           <Link
             href="/page/projects"
