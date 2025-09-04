@@ -43,13 +43,13 @@ export default function Home() {
             <strong className="text-[#00ABE4]">
               développeur full stack (M1/M2)
             </strong>{" "}
-            dans l'école{"  "}
+            dans l&apos;école{"  "}
             <strong className="text-[#00ABE4]">
               Sup de Vinci
             </strong>{" "}
-            en alternance dans l'entreprise{"  "}
+            en alternance dans l&apos;entreprise{"  "}
             <strong className="text-[#00ABE4]">
-              investir dans l'ancien
+              investir dans l&apos;ancien
             </strong>.
           </h2>
           <Link
