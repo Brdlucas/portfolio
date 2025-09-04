@@ -57,12 +57,12 @@ export default function Contact() {
                 "bg-gray-50"
             )} `}>
                 <h1 className=' text-5xl text-center max-sm:text-4xl font-semibold'>Mes informations</h1>
-                <div className='flex justify-center gap-5 my-5'>
-                    <div id='divEmail' onClick={() => CopyElement("lb.lucasbourdon@gmail.Com", true)} className={`bg-white cursor-pointer hover:scale-105 transition duration-300 w-120 text-center place-content-center h-32 rounded-2xl px-2 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)]`}>
-                        <strong id='textEmail' className='text-3xl text-[#00abe4]'>lb.lucasbourdon@gmail.com</strong>
+                <div className='flex justify-center max-md:flex-col align-middle gap-5 my-5'>
+                    <div id='divEmail' onClick={() => CopyElement("lb.lucasbourdon@gmail.Com", true)} className={`bg-white cursor-pointer hover:scale-105 transition duration-300 min-md:w-120  w-full max-w-120 mx-auto text-center place-content-center h-32 rounded-2xl px-2 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)]`}>
+                        <strong id='textEmail' className='min-md:text-3xl text-[#00abe4]'>lb.lucasbourdon@gmail.com</strong>
                     </div>
-                    <div id='divPhone' onClick={() => CopyElement("07 68 21 11 49", false)} className='bg-white cursor-pointer hover:scale-105 transition duration-300 w-120 text-center  place-content-center h-32 rounded-2xl px-2 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)]'>
-                        <strong id='textPhone' className='text-3xl text-[#00abe4]'>07 68 21 11 49</strong>
+                    <div id='divPhone' onClick={() => CopyElement("07 68 21 11 49", false)} className='bg-white cursor-pointer hover:scale-105 transition duration-300 min-md:w-120 text-center w-full max-w-120 mx-auto  place-content-center h-32 rounded-2xl px-2 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)]'>
+                        <strong id='textPhone' className='min-md:text-3xl text-[#00abe4]'>07 68 21 11 49</strong>
                     </div>
                 </div>
 
