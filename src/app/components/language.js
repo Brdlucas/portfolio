@@ -1,6 +1,4 @@
-import Symfony from "@/../public/img/langage/symfony.png";
-import php from "@/../public/img/langage/php.png";
-
+import Expo from "/public/img/expo.webp";
 const Language = [
   {
     id: 1,
@@ -24,7 +22,8 @@ const Language = [
     id: 3,
     width: 96,
     height: 96,
-    src: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+    src:
+      "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
     alt: "React",
     type: "frontend",
     link: "https://fr.legacy.reactjs.org/",
@@ -44,7 +43,7 @@ const Language = [
     id: 5,
     width: 96,
     height: 96,
-    src: Symfony,
+    src: "https://img.icons8.com/color/96/symfony.png",
     alt: "Symfony",
     type: "backend",
     link: "https://symfony.com/",
@@ -54,7 +53,8 @@ const Language = [
     id: 6,
     width: 96,
     height: 96,
-    src: php,
+    src:
+      "https://img.icons8.com/?size=100&id=XNQU0Xcm2I9s&format=png&color=000000",
     alt: "php",
     type: "backend",
     link: "https://www.php.net/",
@@ -123,7 +123,8 @@ const Language = [
     id: 13,
     width: 96,
     height: 96,
-    src: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png",
+    src:
+      "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png",
     alt: "mongodb",
     type: "database",
     link: "https://www.mongodb.com/fr-fr",
@@ -133,7 +134,8 @@ const Language = [
     id: 14,
     width: 96,
     height: 96,
-    src: "https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000",
+    src:
+      "https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000",
     alt: "typescript",
     type: "frontend",
     link: "https://www.typescriptlang.org/",
@@ -147,6 +149,44 @@ const Language = [
     alt: "sqlite",
     type: "database",
     link: "https://www.sqlite.org/",
+  },
+  {
+    id: 16,
+    width: 96,
+    height: 96,
+    src:
+      "https://img.icons8.com/?size=100&id=grZaE9tjqDyr&format=png&color=000000",
+    alt: "supabase",
+    type: "database",
+    link: "https://supabase.com/",
+  },
+  {
+    id: 17,
+    width: 96,
+    height: 96,
+    src: "https://img.icons8.com/?size=100&id=123603&format=png&color=000000",
+    alt: "react native",
+    type: "mobile",
+    link: "https://reactnative.dev/",
+  },
+  {
+    id: 18,
+    width: 96,
+    height: 96,
+    src:
+      "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000",
+    alt: "express js",
+    type: "backend",
+    link: "https://expressjs.com/",
+  },
+  {
+    id: 19,
+    width: 96,
+    height: 96,
+    src: Expo,
+    alt: "Expo",
+    type: "mobile",
+    link: "https://expo.dev/",
   },
 ];
 

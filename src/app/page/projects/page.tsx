@@ -5,39 +5,27 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Skeleton from "./Skeleton";
 import { useTheme } from "next-themes";
+import projects from "../../components/projects";
 
 export default function Projects() {
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
-  const isTheme = useTheme();
+  const { theme } = useTheme();
+  const themeClass = (dark: string, light: string) => (theme === "dark" ? dark : light);
 
-  const fetchProjects = async () => {
-    const res = await fetch("/api/projects");
-    const projects = await res.json();
-    console.log(projects);
-    return projects;
-  };
 
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetchProjects().then((projects) => {
-      setProjects(projects);
-      setLoading(false);
-    });
-  }, []);
-
+  // Filtre les projets selon la recherche (insensible à la casse)
   const filterProjects = projects.filter((project: any) => {
-    return (
-      project.title.toLowerCase().includes(search.toLowerCase()) ||
-      project.description.toLowerCase().includes(search.toLowerCase()) ||
-      project.date.includes(search)
+    const searchTerm = search.trim().toLowerCase();
+    if (!searchTerm) return true; // si recherche vide, tout afficher
+
+    // Cherche dans chaque propriété string du projet si la recherche est contenue
+    return Object.values(project).some((value) =>
+      typeof value === "string" && value.toLowerCase().includes(searchTerm)
     );
   });
 
   return (
     <div>
-      <Header />
       <div>
         <div>
           <textarea
@@ -45,72 +33,46 @@ export default function Projects() {
             placeholder="Rechercher"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className={`text-black pt-5 mt-5 flex  m-auto text-center font-semibold resize-none w-[70%] ${
-              isTheme.theme === "dark"
-                ? "bg-gray-700 text-white"
-                : "bg-gray-100 "
-            }`}
+            className={`rounded-2xl hover:scale-105 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] text-[#00ABE4] transition duration-300 cursor-pointer pt-5 mt-5 flex m-auto text-center font-semibold resize-none w-[70%] ${themeClass('bg-gray-700', 'bg-white')}`}
           />
         </div>
         <section className="m-auto w-[95%] pt-10">
-          <h1 className="pl-1 text-[30px] m-auto border-b-4 border-gray-300 text-purple-500 font-bold uppercase">
-            {projects.length} projets
+          <h1 className="pl-1 text-[30px] m-auto border-b-4 border-gray-300 text-[#00ABE4] font-bold uppercase">
+            {filterProjects.length} projet{filterProjects.length > 1 ? "s" : ""}
           </h1>
 
-          {loading ? (
+          {projects.length === 0 ? (
             <Skeleton />
+          ) : filterProjects.length === 0 ? (
+            <p className="text-center text-gray-500 mt-10">
+              Aucun projet ne correspond à la recherche.
+            </p>
           ) : (
-            <div className="md:pl-[50px] mt-5 max-md:pt-10 grid grid-cols-3 gap-20 max-md:gap-10 max-lg:grid-cols-1 max-md:text-center mb-5 max-2xl:grid-cols-2 min-h-96">
+            <div className="w-full h-full p-6 flex flex-wrap gap-6 justify-center">
               {filterProjects.map((project: any) => (
-                <div
-                  key={project._id}
-                  className={`block m-auto drop-shadow-2xl shd w-[400px] max-md:w-[300px] h-full rounded-[25px] hover:rounded-[15px] hover:scale-110 duration-400 transition ease-in-out delay-150 ${
-                    isTheme.theme === "dark" ? "bg-gray-700 " : "bg-gray-100"
-                  }`}
+                <Link
+                  href={project.link}
+                  key={project.id}
+                  className="w-[320px] bg-white rounded-xl shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] overflow-hidden transition-transform hover:scale-105"
                 >
-                  <div className="relative h-[230px] border-b-4 border-gray-800">
+                  <div className="h-[180px] w-full bg-gray-200 flex items-center justify-center">
                     <Image
                       src={project.image}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-t-[20px]"
-                      alt="Project image"
+                      alt={`Project ${project.title}`}
+                      className="object-cover w-full h-full"
                       property="Lucas Bourdon"
-                      sizes="5x5"
                       priority
                     />
                   </div>
-                  <div className="md:pl-5 pt-2">
-                    <p
-                      className={`font-semibold text-[20px] ${
-                        isTheme.theme === "dark" ? "text-white" : "text-black"
-                      }`}
-                    >
+                  <div className={`p-2 h-full ${themeClass('bg-gray-800 text-white', 'bg-gray-50')} transition duration-300`}>
+                    <h3 className="font-bold text-lg mb-2">
                       {project.title}
-                    </p>
-                    <p
-                      className={`pt-2 h-[full] min-h-[90px]  ${
-                        isTheme.theme === "dark" ? "text-white" : "text-black"
-                      }`}
-                    >
-                      {project.description}
-                    </p>
-                    <strong
-                      className={`pt-2  ${
-                        isTheme.theme === "dark" ? "text-white" : "text-black"
-                      }`}
-                    >
-                      année : {project.date}
-                    </strong>
-                    <Link
-                      target="_blank"
-                      href={project.link}
-                      className="m-auto mb-3 mt-3 block w-[70%] text-center font-semibold text-[15px] text-white rounded-[20px] p-5 bg-purple-500 hover:bg-indigo-500 "
-                    >
-                      Voir {project.title}
-                    </Link>
+                    </h3>
+                    <p className="text-sm">{project.description}</p>
+                    <p className={`text-ms transition duration-300 ${themeClass('text-gray-300', 'text-gray-500')} mt-2`}>{project.language}</p>
+                    <p className={`text-xs transition duration-300 ${themeClass('text-gray-300', 'text-gray-500')} mt-2`}>{project.date}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           )}
