@@ -23,7 +23,7 @@ const projects = [
         title: "Bakkrô",
         link:
             "https://play.google.com/store/apps/details?id=com.anonymous.bakkro",
-        description: "application immobilière avec visité en 3D",
+        description: "application immobilière avec visite en 3D",
         language: "react native",
         date: "11-03-2025",
     },
