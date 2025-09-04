@@ -9,7 +9,9 @@ import projects from "../../components/projects";
 
 export default function Projects() {
   const [search, setSearch] = useState("");
-  const isTheme = useTheme();
+  const { theme } = useTheme();
+  const themeClass = (dark: string, light: string) => (theme === "dark" ? dark : light);
+
 
   // Filtre les projets selon la recherche (insensible à la casse)
   const filterProjects = projects.filter((project: any) => {
@@ -31,8 +33,7 @@ export default function Projects() {
             placeholder="Rechercher"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className={`rounded-2xl hover:scale-105 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] text-[#00ABE4] transition duration-300 cursor-pointer pt-5 mt-5 flex m-auto text-center font-semibold resize-none w-[70%] ${isTheme.theme === "dark" ? "bg-gray-700 text-white" : ""
-              }`}
+            className={`rounded-2xl hover:scale-105 shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] text-[#00ABE4] transition duration-300 cursor-pointer pt-5 mt-5 flex m-auto text-center font-semibold resize-none w-[70%] ${themeClass('bg-gray-700', 'bg-white')}`}
           />
         </div>
         <section className="m-auto w-[95%] pt-10">
@@ -63,13 +64,13 @@ export default function Projects() {
                       priority
                     />
                   </div>
-                  <div className="p-2">
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">
+                  <div className={`p-2 h-full ${themeClass('bg-gray-800 text-white', 'bg-gray-50')} transition duration-300`}>
+                    <h3 className="font-bold text-lg mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-700 text-sm">{project.description}</p>
-                    <p className="text-ms text-gray-500 mt-2">{project.language}</p>
-                    <p className="text-xs text-gray-500 mt-2">{project.date}</p>
+                    <p className="text-sm">{project.description}</p>
+                    <p className={`text-ms transition duration-300 ${themeClass('text-gray-300', 'text-gray-500')} mt-2`}>{project.language}</p>
+                    <p className={`text-xs transition duration-300 ${themeClass('text-gray-300', 'text-gray-500')} mt-2`}>{project.date}</p>
                   </div>
                 </Link>
               ))}

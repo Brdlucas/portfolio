@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 import LanguageSection from "../../components/LanguageSection";
 
 export default function About() {
-  const setTheme = useTheme();
+  const { theme } = useTheme();
+  const themeClass = (dark: string, light: string) => (theme === "dark" ? dark : light);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -19,10 +20,10 @@ export default function About() {
 
   return (
     <div className="px-2 m-auto max-w-9/12 max-md:max-w-full">
-      <section className="text-justify relative mb-5">
+      <section className={`text-justify relative mb-5 rounded-2xl transition duration-300 ${themeClass('bg-gray-800 text-white', 'bg-gray-50')}`}>
         <div className="absolute w-full h-full -z-5 bg-white shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] rounded-2xl"></div>
         <div className="p-3">
-          <p className='text-black'>
+          <p className=''>
             Après des études en systèmes numériques, j&apos;ai suivi une formation
             pour obtenir un{" "}
             <strong className="text-[#00ABE4]">
