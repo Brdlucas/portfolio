@@ -47,10 +47,9 @@ export default function Home() {
             <strong className="text-[#00ABE4]">
               Sup de Vinci
             </strong>{" "}
-            en alternance dans l&apos;entreprise{"  "}
-            <strong className="text-[#00ABE4]">
-              investir dans l&apos;ancien
-            </strong>.
+            et en recherche d&apos;alternance dans le domaine du{" "}
+            <strong>développement web</strong> /
+            <strong>{" "} mobile</strong>
           </h2>
           <Link
             href="/page/projects"

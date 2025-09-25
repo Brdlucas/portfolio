@@ -24,11 +24,14 @@ export default function About() {
         <div className="absolute w-full h-full -z-5 bg-white shadow-[-1px_4px_14px_7px_rgba(0,_0,_0,_0.1)] rounded-2xl"></div>
         <div className="p-3">
           <p className=''>
-            Après des études en systèmes numériques, j&apos;ai suivi une formation
-            pour obtenir un{" "}
+            Après un bac+2 développeur web et web mobile, j&apos;ai continué la même formation
+            pour obtenir le{" "}
             <strong className="text-[#00ABE4]">
-              diplôme de développeur web et web mobile de niveau 5 (équivalent à
-              un bac +2)
+              diplôme concepteur développeur d&apos;application (CDA)               {" "}
+            </strong>
+            équivalent a               {" "}
+            <strong className="text-[#00ABE4]">
+              bac+3
             </strong>
             . Au cours de cette formation, j&apos;ai acquis une solide maîtrise de
             plusieurs langages les plus connus tels que HTML (langage de
@@ -39,16 +42,15 @@ export default function About() {
               (détails ci-dessous)
             </a>
             .<br /> <br /> J&apos;ai également appris à utiliser Next.js,(React
-            Framework avec laquelle j&apos;ai développé ce site web), lors
-            d&apos;un stage de 2 mois. Passionné par l&apos;apprentissage en
+            Framework avec laquelle j&apos;ai développé ce site web). Passionné par l&apos;apprentissage en
             autodidacte, je suis constamment à la recherche de nouvelles
             connaissances et compétences.
             <br />
             <br />
-            Aujourd&apos;huit, j&apos;étudie toujours dans la même formation pour
+            Aujourd&apos;huit, j&apos;étudie dans l&apos;école Sup de Vinci pour
             obtenir un{" "}
             <strong className="text-[#00ABE4]">
-              Bac+3 concepteur développeur d&apos;application (CDA).
+              M1/M2 développeur full stack.
             </strong>
             <br />
             <br /> Je vous invite à aller voir mon CV crée en React sur lequelle
